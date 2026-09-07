@@ -1,5 +1,11 @@
-# Ταβέρνα Ο Θόδωρος — Demo
+# Taverna "O Thodoros"
 
-Static demo website concept for the Thessaloniki restaurant **Taverna O Thodoros**.
+Website for Taverna "O Thodoros" in Thessaloniki.
 
-Business facts were checked against Google Maps and public listings before building the demo. This is a concept/demo, not an official website and no contact was made with the business.
+## Contact
+- Address: Paparrigopoulou 15, Thessaloniki 546 30, Greece
+- Phone: 231 052 0892
+- Email: Not publicly verified
+
+## Website
+https://taverna-o-thodoros-demo.vercel.app
