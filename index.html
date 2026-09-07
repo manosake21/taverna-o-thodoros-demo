@@ -1,7 +1,186 @@
-<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ταβέρνα Ο Θόδωρος — Θεσσαλονίκη</title><meta name="description" content="Η επίσημη ψηφιακή παρουσία για την Ταβέρνα Ο Θόδωρος στη Θεσσαλονίκη."><style>body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#f7f2e8;color:#25221e}main{max-width:900px;margin:auto;padding:72px 24px}section{padding:42px 0}h1{font-size:clamp(42px,8vw,76px);line-height:.95;margin:0 0 20px}h2{font-size:30px}p{font-size:18px;line-height:1.7;max-width:680px}.tag{display:inline-block;padding:8px 12px;border-radius:999px;background:#e8dcc8;font-size:14px}a{display:inline-block;margin-top:18px;padding:13px 18px;border-radius:10px;background:#25221e;color:#fff;text-decoration:none}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{background:#fff;padding:22px;border-radius:16px;box-shadow:0 8px 30px #0000000d}</style><style>.visit-cta{padding:56px 24px;max-width:900px;margin:auto}.visit-cta div{display:flex;gap:12px;flex-wrap:wrap}.visit-cta a{margin-top:8px}.visit-cta h2{margin-bottom:12px}</style></head><body><main><span class="tag">Κέντρο Θεσσαλονίκης · από το 1965</span><section><h1>Ταβέρνα<br>Ο Θόδωρος</h1><p>Ένα concept για μια ζεστή, αυθεντική σαλονικιώτικη ταβέρνα με σπιτικά μαγειρευτά, μεζέδες και κρεατικά.</p><a href="tel:+302310520892">Κράτηση · 2310 520 892</a></section><section><h2>Οι γεύσεις μας</h2><div class="grid"><div class="card"><h3>Σουτζουκάκια</h3><p>Μία από τις κλασικές σπεσιαλιτέ του μαγαζιού.</p></div><div class="card"><h3>Χειροποίητα ντολμαδάκια</h3><p>Παραδοσιακή συνταγή και σπιτική φροντίδα.</p></div><div class="card"><h3>Κρεατικά & μεζέδες</h3><p>Επιλογές για παρέες, μεζεδάκια και πιάτα ημέρας.</p></div></div></section><section><h2>Επισκεφθείτε μας</h2><p>Παπαρρηγοπούλου 15, Θεσσαλονίκη 546 30</p><p>Δευτέρα και Τετάρτη–Σάββατο 13:00–00:00 · Κυριακή 12:00–18:00</p><a href="https://maps.google.com/?cid=9764032765703413196">Άνοιγμα στο Google Maps</a></section><section id="visit" class="visit-cta"><h2>Μια στάση που αξίζει.</h2><p>Μια καλή έξοδος ξεκινά με εύκολη πρόσβαση και ξεκάθαρες πληροφορίες. Δες το σημείο και έλα να μας γνωρίσεις.</p><div><a href="https://maps.google.com/?cid=9764032765703413196" target="_blank" rel="noopener">Δες τη διαδρομή στο Google Maps</a><a href="tel:2310520892">Κάλεσε · 231 052 0892</a></div></section></main>
-<section id="contact" style="padding:2rem 1.25rem;max-width:900px;margin:0 auto">
-  <h2>Επικοινωνία</h2>
-  <p><strong>Τηλέφωνο:</strong> <a href="tel:+302310520892">+30 231 052 0892</a></p>
-  
-</section>
-</body></html>
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ταβέρνα Ο Θόδωρος — Θεσσαλονίκη</title>
+<meta name="description" content="Η επίσημη ψηφιακή παρουσία για την Ταβέρνα Ο Θόδωρος στη Θεσσαλονίκη.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0d3b66;      /* βαθύ μπλε */
+  --accent:#f4d35e;       /* χρυσαφί */
+  --bg:#f7f2e8;
+  --text:#25221e;
+  --radius:12px;
+  --transition:.3s ease;
+  --font-heading:"Playfair Display",serif;
+  --font-body:"Open Sans",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;}
+body{
+  font-family:var(--font-body);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:var(--primary);text-decoration:none;}
+a:hover{text-decoration:underline;}
+button{cursor:pointer;background:none;border:none;}
+.container{max-width:960px;margin:auto;padding:1rem;}
+header{
+  background:linear-gradient(135deg,var(--primary),#1e5a9a);
+  color:#fff;
+  text-align:center;
+  padding:4rem 1rem 3rem;
+}
+header h1{
+  font-family:var(--font-heading);
+  font-size:clamp(2.5rem,10vw,4rem);
+  margin-bottom:.5rem;
+}
+header p{
+  font-size:1.125rem;
+  margin-bottom:1.5rem;
+}
+header .cta{
+  display:inline-block;
+  background:var(--accent);
+  color:#000;
+  padding:.75rem 1.5rem;
+  border-radius:var(--radius);
+  font-weight:600;
+  transition:var(--transition);
+}
+header .cta:hover{background:#e5c04c;}
+.tag{
+  display:inline-block;
+  background:rgba(255,255,255,.2);
+  padding:.4rem .8rem;
+  border-radius:999px;
+  font-size:.875rem;
+  margin-bottom:1rem;
+}
+section{padding:3rem 1rem;}
+section h2{
+  font-family:var(--font-heading);
+  font-size:2rem;
+  margin-bottom:1rem;
+  text-align:center;
+}
+.grid{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+}
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:1.5rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+  transition:var(--transition);
+}
+.card:hover{transform:translateY(-4px);}
+.card h3{
+  font-family:var(--font-heading);
+  font-size:1.5rem;
+  margin-bottom:.5rem;
+  color:var(--primary);
+}
+footer{
+  background:#222;
+  color:#ddd;
+  text-align:center;
+  padding:2rem 1rem;
+  font-size:.875rem;
+}
+footer a{color:#ddd;}
+.visited{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:1.5rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.visited a{
+  display:inline-block;
+  margin-top:.5rem;
+  background:var(--primary);
+  color:#fff;
+  padding:.5rem 1rem;
+  border-radius:var(--radius);
+  transition:var(--transition);
+}
+.visited a:hover{background:#0a2e50;}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;}
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click',function(e){
+      e.preventDefault();
+      const target=document.querySelector(this.getAttribute('href'));
+      if(target){target.scrollIntoView({behavior:'smooth'});}
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="tag">Κέντρο Θεσσαλονίκης · από το 1965</div>
+    <h1>Ταβέρνα Ο Θόδωρος</h1>
+    <p>Ζεστή, αυθεντική σαλονικιώτικη ταβέρνα με σπιτικά μαγειρευτά, μεζέδες και κρεατικά.</p>
+    <a class="cta" href="tel:+302310520892">Κράτηση · 2310 520 892</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <section id="menu">
+    <h2>Οι γεύσεις μας</h2>
+    <div class="grid">
+      <article class="card" aria-labelledby="soutzoukakia">
+        <h3 id="soutzoukakia">Σουτζουκάκια</h3>
+        <p>Μία από τις κλασικές σπεσιαλιτέ του μαγαζιού.</p>
+      </article>
+      <article class="card" aria-labelledby="dolmadakia">
+        <h3 id="dolmadakia">Χειροποίητα ντολμαδάκια</h3>
+        <p>Παραδοσιακή συνταγή και σπιτική φροντίδα.</p>
+      </article>
+      <article class="card" aria-labelledby="mezedes">
+        <h3 id="mezedes">Κρεατικά &amp; μεζέδες</h3>
+        <p>Επιλογές για παρέες, μεζεδάκια και πιάτα ημέρας.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2>Επισκεφθείτε μας</h2>
+    <div class="visited">
+      <p><strong>Διεύθυνση:</strong> Παπαρρηγοπούλου 15, Θεσσαλονίκη 546 30</p>
+      <p><strong>Ωράριο:</strong> Δευτέρα &amp; Τετάρτη–Σάββατο 13:00–00:00 · Κυριακή 12:00–18:00</p>
+      <a href="https://maps.google.com/?cid=9764032765703413196" target="_blank" rel="noopener">Άνοιγμα στο Google Maps</a>
+      <a href="tel:+302310520892">Κάλεσε · 231 052 0892</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Επικοινωνία</h2>
+    <p><strong>Τηλέφωνο:</strong> <a href="tel:+302310520892">+30 231 052 0892</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2024 Ταβέρνα Ο Θόδωρος – Όλα τα δικαιώματα διατηρούνται.</p>
+  <p><a href="#menu">Μενού</a> • <a href="#visit">Τοποθεσία</a> • <a href="#contact">Επικοινωνία</a></p>
+</footer>
+
+</body>
+</html>
