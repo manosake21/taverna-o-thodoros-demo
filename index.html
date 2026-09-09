@@ -8,53 +8,56 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --primary:#0d3b66;      /* βαθύ μπλε */
-  --accent:#f4d35e;       /* χρυσαφί */
-  --bg:#f7f2e8;
-  --text:#25221e;
-  --radius:12px;
-  --transition:.3s ease;
+  --clr-primary:#2a3d5b;      /* deep navy */
+  --clr-accent:#c49e3b;       /* warm gold */
+  --clr-bg:#fdf8f3;
+  --clr-text:#2e2b28;
+  --radius:10px;
+  --gap:1.5rem;
   --font-heading:"Playfair Display",serif;
   --font-body:"Open Sans",sans-serif;
+  --transition:0.3s ease;
 }
-*{box-sizing:border-box;margin:0;padding:0;}
-html{font-size:16px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{font-size:16px;scroll-behavior:smooth;}
 body{
   font-family:var(--font-body);
-  background:var(--bg);
-  color:var(--text);
+  background:var(--clr-bg);
+  color:var(--clr-text);
   line-height:1.6;
 }
-img{max-width:100%;height:auto;display:block;}
-a{color:var(--primary);text-decoration:none;}
-a:hover{text-decoration:underline;}
-button{cursor:pointer;background:none;border:none;}
-.container{max-width:960px;margin:auto;padding:1rem;}
+a{
+  color:var(--clr-primary);
+  text-decoration:none;
+}
+a:hover,a:focus-visible{text-decoration:underline;}
+button{
+  font:inherit;
+  cursor:pointer;
+  background:none;
+  border:none;
+}
+svg{display:block;max-width:100%;height:auto;}
+.container{
+  max-width:960px;
+  margin:auto;
+  padding:1rem;
+}
 header{
-  background:linear-gradient(135deg,var(--primary),#1e5a9a);
+  background:linear-gradient(135deg,var(--clr-primary),#1b2e4a);
   color:#fff;
   text-align:center;
   padding:4rem 1rem 3rem;
+  position:relative;
+  overflow:hidden;
 }
-header h1{
-  font-family:var(--font-heading);
-  font-size:clamp(2.5rem,10vw,4rem);
-  margin-bottom:.5rem;
+header::after{
+  content:"";
+  position:absolute;
+  bottom:0;left:0;width:100%;height:80px;
+  background:url('data:image/svg+xml,%3Csvg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill="%23fdf8f3" d="M0,30 C360,90 1080,0 1440,30 L1440,80 L0,80 Z"%3E%3C/path%3E%3C/svg%3E') repeat-x;
+  background-size:cover;
 }
-header p{
-  font-size:1.125rem;
-  margin-bottom:1.5rem;
-}
-header .cta{
-  display:inline-block;
-  background:var(--accent);
-  color:#000;
-  padding:.75rem 1.5rem;
-  border-radius:var(--radius);
-  font-weight:600;
-  transition:var(--transition);
-}
-header .cta:hover{background:#e5c04c;}
 .tag{
   display:inline-block;
   background:rgba(255,255,255,.2);
@@ -63,31 +66,77 @@ header .cta:hover{background:#e5c04c;}
   font-size:.875rem;
   margin-bottom:1rem;
 }
-section{padding:3rem 1rem;}
-section h2{
+h1{
+  font-family:var(--font-heading);
+  font-size:clamp(2.5rem,10vw,4rem);
+  margin:.5rem 0;
+}
+h2{
   font-family:var(--font-heading);
   font-size:2rem;
-  margin-bottom:1rem;
+  margin-bottom:.75rem;
   text-align:center;
+}
+p{margin-bottom:1rem;}
+.cta{
+  display:inline-block;
+  background:var(--clr-accent);
+  color:#000;
+  padding:.75rem 1.5rem;
+  border-radius:var(--radius);
+  font-weight:600;
+  transition:var(--transition);
+}
+.cta:hover,.cta:focus-visible{background:#b58a32;}
+nav{
+  background:#fff;
+  box-shadow:0 2px 6px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+nav ul{
+  display:flex;
+  justify-content:center;
+  gap:var(--gap);
+  list-style:none;
+  padding:.75rem 1rem;
+}
+nav a{
+  font-weight:600;
+  padding:.25rem .5rem;
+  border-radius:var(--radius);
+}
+nav a:focus-visible{
+  outline:2px solid var(--clr-accent);
+  outline-offset:2px;
+}
+section{
+  padding:3rem 1rem;
 }
 .grid{
   display:grid;
-  gap:1.5rem;
+  gap:var(--gap);
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 .card{
   background:#fff;
   border-radius:var(--radius);
   padding:1.5rem;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
+  box-shadow:0 4px 12px rgba(0,0,0,.07);
   transition:var(--transition);
 }
-.card:hover{transform:translateY(-4px);}
+.card:hover,.card:focus-within{
+  transform:translateY(-4px);
+}
 .card h3{
   font-family:var(--font-heading);
   font-size:1.5rem;
-  margin-bottom:.5rem;
-  color:var(--primary);
+  margin:.5rem 0;
+  color:var(--clr-primary);
+}
+.icon{
+  width:1.25rem;height:1.25rem;vertical-align:middle;fill:currentColor;margin-right:.5rem;
 }
 footer{
   background:#222;
@@ -96,36 +145,27 @@ footer{
   padding:2rem 1rem;
   font-size:.875rem;
 }
-footer a{color:#ddd;}
-.visited{
-  background:#fff;
-  border-radius:var(--radius);
-  padding:1.5rem;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
+footer a{
+  color:#ddd;
 }
-.visited a{
-  display:inline-block;
-  margin-top:.5rem;
-  background:var(--primary);
-  color:#fff;
-  padding:.5rem 1rem;
-  border-radius:var(--radius);
-  transition:var(--transition);
+footer a:focus-visible{
+  outline:2px solid var(--clr-accent);
+  outline-offset:2px;
 }
-.visited a:hover{background:#0a2e50;}
 @media (prefers-reduced-motion:reduce){
-  *{transition:none!important;}
+  *,*::before,*::after{transition:none!important;}
 }
 </style>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-  document.querySelectorAll('a[href^="#"]').forEach(function(link){
-    link.addEventListener('click',function(e){
+  const links=document.querySelectorAll('a[href^="#"]');
+  links.forEach(l=>l.addEventListener('click',e=>{
+    const target=document.querySelector(l.getAttribute('href'));
+    if(target){
       e.preventDefault();
-      const target=document.querySelector(this.getAttribute('href'));
-      if(target){target.scrollIntoView({behavior:'smooth'});}
-    });
-  });
+      target.scrollIntoView({behavior:'smooth'});
+    }
+  }));
 });
 </script>
 </head>
@@ -139,6 +179,14 @@ document.addEventListener('DOMContentLoaded',function(){
     <a class="cta" href="tel:+302310520892">Κράτηση · 2310 520 892</a>
   </div>
 </header>
+
+<nav aria-label="Κύρια πλοήγηση">
+  <ul>
+    <li><a href="#menu">Μενού</a></li>
+    <li><a href="#visit">Τοποθεσία</a></li>
+    <li><a href="#contact">Επικοινωνία</a></li>
+  </ul>
+</nav>
 
 <main class="container">
 
@@ -162,25 +210,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
   <section id="visit">
     <h2>Επισκεφθείτε μας</h2>
-    <div class="visited">
-      <p><strong>Διεύθυνση:</strong> Παπαρρηγοπούλου 15, Θεσσαλονίκη 546 30</p>
-      <p><strong>Ωράριο:</strong> Δευτέρα &amp; Τετάρτη–Σάββατο 13:00–00:00 · Κυριακή 12:00–18:00</p>
-      <a href="https://maps.google.com/?cid=9764032765703413196" target="_blank" rel="noopener">Άνοιγμα στο Google Maps</a>
-      <a href="tel:+302310520892">Κάλεσε · 231 052 0892</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Επικοινωνία</h2>
-    <p><strong>Τηλέφωνο:</strong> <a href="tel:+302310520892">+30 231 052 0892</a></p>
-  </section>
-
-</main>
-
-<footer>
-  <p>© 2024 Ταβέρνα Ο Θόδωρος – Όλα τα δικαιώματα διατηρούνται.</p>
-  <p><a href="#menu">Μενού</a> • <a href="#visit">Τοποθεσία</a> • <a href="#contact">Επικοινωνία</a></p>
-</footer>
-
-</body>
-</html>
+    <div class="card">
+      <p><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg><strong>Διεύθυνση:</strong> Παπαρρηγοπούλου 15, Θεσσαλονίκη 546 30</p>
+      <p><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 16H5V5h2v2h10V5h2v14z"/></svg><strong>Ωράριο:</strong> Δευτέρα &amp; Τετάρτη–Σάββατο 13:00–00:00 · Κυριακή 12:00–18:00</p>
+      <p>
+        <a href="https://maps.google.com/?cid=9764032765703413196" target="_blank" rel="noopener"><footer style="padding:2rem 6vw;border-top:1px solid #ddd;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font:600 .75rem system-ui;letter-spacing:.08em;text-transform:uppercase"><span>Taverna O Thodoros</span><span>© 2026</span></footer></body></html>
